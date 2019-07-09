@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      perspective: 1000px;
+    }
+    img {
+      margin: 100px auto;
+      display: block;
+      transition: all 2s;
+    }
+    img:hover {
+      /* 左手定则: 伸出左手, 握拳, 大拇指指向轴的正方向 
+         其他手指卷曲的方向, 就是旋转的正方向
+      */
+      /* transform: rotateX(-45deg); */
+      /* transform: rotateY(-45deg); */
+      /* transform: rotateZ(45deg); */
+      transform: rotateY(90deg);
+    }
+  </style>
+</head>
+<body>
+
+  <img src="00.jpg" alt="">
+  
+</body>
+</html>

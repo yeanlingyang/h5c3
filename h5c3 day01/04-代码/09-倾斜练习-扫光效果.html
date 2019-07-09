@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #000;
+    }
+    div {
+      width: 670px;
+      height: 419px;
+      margin: 100px auto;
+      position: relative;
+      overflow: hidden;
+    }
+    /* 在盒子内容的最前面, 添加一个行内元素 
+       注意点:
+        1. 必须设置 content 属性
+        2. 默认是行内元素
+           如果可以设置宽高
+           (1) 设置显示模式 display: block/inline-block;
+           (2) 脱标, float: left;
+                     position: absolute;
+                     position: fixed;
+
+       语法: background-image: linear-gradient( 方向, 颜色 范围, 颜色 范围, .... );
+    */
+    div::before {
+      content: "";
+      position: absolute;
+      left: -100px;
+      top: 0;
+      width: 30px;
+      height: 100%;
+      background-image: linear-gradient(
+        to right,
+        rgba(255,255,255,0),
+        rgba(255,255,255,1),
+        rgba(255,255,255,0)
+      );
+      /* x不动, 让y往反方向旋转 */
+      transform: skewX(-30deg);
+      transform-origin: left top;
+    }
+    div:hover::before {
+      left: 1000px;
+      transition: all 2s;
+    }
+  
+  </style>
+</head>
+<body>
+
+  <div>
+    <img src="images/ll.jpg" alt="">
+  </div>
+  
+</body>
+</html>

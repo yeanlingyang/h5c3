@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 
+      缩放语法 scale
+      1. transform: scale(x, y);
+      2. transform: scale(2);  水平和垂直都缩放2倍, 等比例缩放  (常用!!)
+      3. transform: scaleX(0.5);
+         transform: scaleY(2);
+    */
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px auto;
+      transition: all 1s;
+    }
+    div:hover {
+      /* transform: scale(2, 1); */
+      /* transform: scale(.5); */
+      
+      /* 多个transform变换, 后面的会覆盖前面的 */
+      /* transform: scaleX(.5);
+      transform: scaleY(2); */
+
+      transform: scale(.5, 2);
+    }
+  </style>
+</head>
+<body>
+
+  <div>我是文字</div>
+  
+</body>
+</html>

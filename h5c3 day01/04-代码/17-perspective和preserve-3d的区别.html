@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      width: 200px;
+      height: 400px;
+      border: 1px solid #000;
+      margin: 100px auto;
+      list-style: none;
+      position: relative;
+      transform: rotateY(0deg);
+      /* perspective 让子元素近大远小, 只是视觉效果, 有时可以用于调试 */
+      perspective: 1000px;
+
+      /* 真3d 
+         transform-style:
+         1. flat 默认值, 子元素在2d平面布局
+         2. preserve-3d  子元素在三维空间布局
+      */
+      transform-style: preserve-3d;
+    }
+    li {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    li:nth-child(1) {
+      background-color: pink;
+    }
+    li:nth-child(2) {
+      background-color: orange;
+      transform: rotateX(45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li></li>
+    <li></li>
+  </ul>
+  
+</body>
+</html>

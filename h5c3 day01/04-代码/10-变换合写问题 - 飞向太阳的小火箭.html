@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    /* 标准写法 */
+    html, body {
+      width: 100%;
+      height: 100%;
+      /* 不希望出现滚动条 */
+      overflow: hidden;
+    }
+    div {
+      width: 100%;
+      height: 100%;
+      /* 径向渐变: background-image: radial-gradient(半径 at 圆心位置, 颜色 范围, 颜色 范围,...) */
+      background-image: radial-gradient(200px at right top, red, yellow, skyblue);
+    }
+    div img {
+      position: absolute;
+      left: -101px;
+      bottom: -190px;
+    }
+    /* 包含了三个变换：平移 + 旋转 + 缩放 */
+    /* 变换合写注意点:
+       1. 多个transform会发生覆盖, 如果要写多个变换, 空格隔开合写
+       2. 旋转会改变坐标系, 一般将旋转会放在最后
+    */
+    div:hover img {
+      transform: translate(1400px, -700px) scale(0) rotate(45deg);
+      transition: all 5s;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 全屏容器 -->
+<div>
+  <img src="images/rocket.png" alt="">
+</div>
+  
+</body>
+</html>

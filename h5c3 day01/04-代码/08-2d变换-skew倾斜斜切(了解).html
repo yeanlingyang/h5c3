@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 
+      倾斜, 斜切 skew, 会让盒子变形
+      语法:
+        1. transform: skewX(角度);    
+           x轴不动, 让 y 轴往 x 轴方向旋转对应的角度!!! (水平方向的倾斜)
+
+           transform: skewY(角度);
+           y轴不动, 让 x 轴往 y 轴方向旋转对应的角度!!! (垂直方向的倾斜)
+
+        2. transform: skew(x, y);
+    */
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px auto;
+      transition: all 3s;
+      /* 调整变换基准点到左上角 */
+      /* transform-origin: left top; */
+    }
+    div:hover {
+      /* transform: skewX(-30deg); */
+      /* transform: skewY(30deg); */
+      transform: skew(45deg, 45deg);
+    }
+  
+  </style>
+</head>
+<body>
+
+  <div></div>
+  
+</body>
+</html>

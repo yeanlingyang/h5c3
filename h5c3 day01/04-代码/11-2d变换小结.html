@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<!-- 
+  1. 平移 translate
+     transform: translate(x, y);
+     transform: translateX(10px);
+     transform: translateY(10px);
+     注意点:
+       1. 相对于原来自身位置进行位移, 不会影响其他盒子
+       2. 如果设置百分比, 相对于自身宽高计算
+
+  2. 缩放 scale
+      transform: scale(x, y);
+      transform: scale(2);  水平和垂直都缩放2倍, 等比例缩放
+      transform: scaleX(.5);
+      transform: scaleY(2);
+
+  3. 旋转 rotate
+     transform: rotate(角度);  单位 deg
+     顺时针为正方向
+
+  4. 倾斜 skew (了解, 会变形)
+     transform: skewX(角度);  x不动, 让y轴往x轴方向旋转对应的角度
+     transform: skewY(角度);  y不动, 让x轴往y轴方向旋转对应的角度
+     transform: skew(x, y);
+
+  变换基准点 transform-origin, 默认值 center center
+  取值:
+    (1) 方位词,  left / right / top / bottom / center
+    (2) 支持具体 x y 坐标
+
+  变换合写问题:
+    1. 如果设置多个transform, 后面的会覆盖前面的, 多个变换可以通过空格隔开合写
+    2. 旋转会改变坐标系, 一般将旋转放在最后面!!!
+-->
+  
+</body>
+</html>

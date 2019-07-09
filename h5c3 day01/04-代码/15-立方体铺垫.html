@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      /* 只有设置了 perspective 才有近大远小 的透视效果 */
+      perspective: 1000px;
+    }
+    img {
+      margin: 100px auto;
+      display: block;
+      transition: all 2s;
+    }
+    /* 旋转会改变坐标系, 脸看的方向, 永远是z轴 
+       立方体实现思路:
+         1. 先旋转朝向对应的方向
+         2. 在z轴方向位移即可
+    */
+    img:hover {
+      /* 右面 */
+      /* transform: rotateY(90deg) translateZ(200px); */
+
+      /* 左面 */
+      /* transform: rotateY(-90deg) translateZ(200px); */
+
+      /* 上面 先躺下 */
+      /* transform: rotateX(90deg) translateZ(200px); */
+
+      /* 下面 先趴下 */
+      /* transform: rotateX(-90deg) translateZ(200px); */
+
+      transform: translateY(200px) rotateX(-90deg);
+    }
+  </style>
+</head>
+<body>
+
+  <img src="00.jpg" alt="">
+  
+</body>
+</html>

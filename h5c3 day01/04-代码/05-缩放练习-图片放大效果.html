@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 500px;
+      height: 384px;
+      margin: 100px auto;
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+    div img {
+      transition: all 1s;
+      /* 
+        transform-origin 变换基准点(参考点) 默认值: center center
+        transform-origin: top;  =>  transform-origin: center top;
+
+        (1) 支持方位词  left/right/top/bottom/center
+            left top;
+        (2) 支持具体x y 坐标
+      */
+      transform-origin: 85px 86px;
+    }
+    div:hover img {
+      transform: scale(5);
+    }
+  </style>
+</head>
+<body>
+  
+  <div>
+    <img src="images/girl.jpg" alt="">
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .father {
+      width: 600px;
+      height: 600px;
+      border: 1px solid #000;
+      margin: 100px auto;
+      position: relative;
+    }
+    .son {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      /* 往左上位移自身宽高的一半 */
+      transform: translate(-50%, -50%);
+
+      /* 实现效果: 让任意宽高的子盒子, 在任意宽高的父元素中水平垂直居中!!! */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="father">
+    <div class="son"></div>
+  </div>
+  
+</body>
+</html>

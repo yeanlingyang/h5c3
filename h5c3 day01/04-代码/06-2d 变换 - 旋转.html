@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* transform: rotate(角度);  角度单位 deg 
+       顺时针为正方向
+    */
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px auto;
+      transition: all 3s;
+      /* 设置变换基准点 */
+      transform-origin: left top;
+    }
+    div:hover {
+      transform: rotate(360deg);
+    }
+  </style>
+</head>
+<body>
+
+  <div>我是内容</div>
+
+</body>
+</html>

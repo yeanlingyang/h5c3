@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /*
+      变换, 所有的变换, 属性名 transform
+
+      平移: 让盒子在原有的位置基础上位移  translate
+      语法:
+        1. transform: translate(x, y);
+        2. transform: translateX(10px);
+           transform: translateY(10px);
+
+      注意点:
+        1. 让盒子在原有的位置基础上位移, 变换不会影响其他盒子
+        2. 如果设置的百分比, 相对于自身宽高计算  (水平垂直居中!!)
+    */
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px auto;
+      transition: all 1s;
+    }
+    div:hover {
+      /* transform: translate(-100px, -100px); */
+      /* transform: translateX(100px); */
+      transform: translateX(50%);
+    }
+  </style>
+</head>
+<body>
+  
+  <div></div>
+  
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 
+      1. 给父元素设置 perspective, 可以让子元素有近大远小的透视效果 (视觉效果)
+      2. 设置 1000px, 指观察者 到 盒子 的距离
+         (1) 设置太小, 效果太明显, 打脸的效果
+         (2) 设置太大, 效果不明显
+         (3) 实际开发一般设置 1000px
+    */
+    body {
+      perspective: 1000px;
+    }
+    img {
+      margin: 100px auto;
+      display: block;
+      transition: all 5s;
+    }
+    img:hover {
+      transform: rotateX(-45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <img src="00.jpg" alt="">
+  
+</body>
+</html>

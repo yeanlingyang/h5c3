@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 打开浏览器快捷键  alt + b */
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px auto;
+
+      /* 
+        transition 过渡
+        1. 需要有两个状态, A 和 B, 设置了 transition 属性的盒子, 
+           会在 A 到 B 的状态间实现过渡动画
+
+        2. transition设置给 A 或者 设置给 B 状态, 都可以, 效果不一样, 具体看需求
+      */
+      /* all 表示对于所有属性实现过渡 
+         1s  过渡动画的时间
+      */
+    }
+    div:hover {
+      width: 400px;
+      height: 400px;
+      background-color: green;
+      transition: all 2s;
+    }
+  </style>
+</head>
+<body>
+
+  <div></div>
+  
+</body>
+</html>
