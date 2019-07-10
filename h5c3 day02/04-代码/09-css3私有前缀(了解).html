@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px auto;
+      /* 标准写法 */
+      /* transform: rotate(45deg); */
+
+      /* 在早期, 草案中规定了css3的语法, 各大浏览器会根据草案, 实现自己浏览器的语法版本
+         会加上私有前缀, 防止和标准语法冲突
+
+         私有前缀, 只是用于兼容的, 我们只需要记标准语法
+         将来会学习 webpack 自动化打包工具, 可以自动将前缀添加完成
+
+         (前端工程化, 前端自动化)
+      */
+      /* 兼容 chrome 和 safari  */
+      -webkit-transform: rotate(45deg);
+
+      /* 兼容 ie */
+      -ms-transform: rotate(45deg);
+
+      /* 兼容 firefox */
+      -moz-transform: rotate(45deg);
+
+      /* 兼容 欧鹏 */
+      -o-transform: rotate(45deg);
+      
+      /* 标准写法, 在新版本浏览器中支持, 在旧版本浏览器中, 只认识带前缀的写法 */
+      transform: rotate(45deg);
+    }
+  
+  </style>
+</head>
+<body>
+
+
+  <div></div>
+  
+</body>
+</html>

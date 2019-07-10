@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: skyblue;
+    }
+    .fish {
+      width: 174px;
+      height: 126px;
+      background: url("images/fish-12-126.png") 0 0;
+      /* 第二条鱼 */
+      /* background-position: 0 -126px; */
+      /* 第三条鱼 */
+      /* background-position: 0 -252px; */
+
+      /* 使用动画 */
+      /* animation: 动画名称 动画时间 动画次数 动画效果 */
+      /* 多组组合动画, 需要连写, 通过逗号隔开  */
+      animation: dou 1s infinite steps(12), swim 6s infinite;
+    }
+
+    /* 设计动画, 原地抖的动画, 控制背景定位 */
+    @keyframes dou {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 0 -1512px;
+      }
+    }
+
+    /* 设计动画, 游动的动画 (平移 + 旋转)
+       (1) 在原来的位置
+       (2) 游到最右边
+       (3) 转个身
+       (4) 游回来
+       (5) 再转身回来
+    */
+    /* 设计动画一一对应 */
+    /* 所有的变换, 永远相对于初始的位置变换的, 动画会在不同的状态间, 自动补全动画 */
+    @keyframes swim {
+      0% {
+        transform: translateX(0px) rotate(0deg);
+      }
+      25% {
+        transform: translateX(1000px) rotate(0deg);
+      }
+      50% {
+        transform: translateX(1000px) rotate(180deg);
+      }
+      75% {
+        transform: translateX(0px) rotate(180deg);
+      }
+      100% {
+        transform: translateX(0px) rotate(360deg);
+      }
+    }
+
+    .fish:nth-child(1),
+    .fish:nth-child(5) {
+      /* 第一个是抖的时间, 第二个是游动的时间 */
+      animation-duration: 1.2s, 10s;
+    }
+    .fish:nth-child(2),
+    .fish:nth-child(4) {
+      /* 第一个是抖的时间, 第二个是游动的时间 */
+      animation-duration: 1.1s, 8s;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fish"></div>
+  <div class="fish"></div>
+  <div class="fish"></div>
+  <div class="fish"></div>
+  <div class="fish"></div>
+  
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .father {
+      width: 240px;
+      height: 240px;
+      position: relative;
+      /* 使用动画: 动画名称 动画时间  */
+      animation: run 2s infinite linear;
+      z-index: 2;
+    }
+
+    .father .son {
+      width: 60px;
+      height: 120px;
+      position: absolute;
+      left: 60px;
+      top: 0;
+      background-color: blue;
+      border-radius: 60px 0 0 60px;
+      transform-origin: right bottom;
+    }
+
+    .father .son:nth-child(2) {
+      transform: rotate(90deg);
+      background-color: green;
+    }
+
+    .father .son:nth-child(3) {
+      transform: rotate(180deg);
+      background-color: red;
+    }
+
+    .father .son:nth-child(4) {
+      transform: rotate(270deg);
+      background-color: orange;
+    }
+
+    .box {
+      position: relative;
+      float: left;
+    }
+
+    .gun {
+      width: 10px;
+      height: 300px;
+      background-color: #000;
+      position: absolute;
+      left: 115px;
+      top: 120px;
+    }
+
+    /* 
+      1. 定义动画
+      2. 使用动画
+    */
+    /* 设计动画一一对应 */
+    @keyframes run {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <!-- 扇叶部分 -->
+    <div class="father">
+      <div class="son"></div>
+      <div class="son"></div>
+      <div class="son"></div>
+      <div class="son"></div>
+    </div>
+    <!-- 棍子部分 -->
+    <div class="gun"></div>
+  </div>
+
+  <div class="box">
+    <!-- 扇叶部分 -->
+    <div class="father">
+      <div class="son"></div>
+      <div class="son"></div>
+      <div class="son"></div>
+      <div class="son"></div>
+    </div>
+    <!-- 棍子部分 -->
+    <div class="gun"></div>
+  </div>
+
+</body>
+
+</html>

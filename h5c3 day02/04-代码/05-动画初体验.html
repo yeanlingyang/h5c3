@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 
+      transition过渡的特征:
+        1. 需要触发
+        2. 需要有两个状态, 会在两个状态间完成动画
+        3. 过渡动画不能一直执行下去的
+
+      animation动画的特征:
+        1. 不需要触发
+        2. 可以有多个状态, 利用百分比
+        3. 可以一直执行下去
+
+      使用动画的步骤
+        1. 定义动画(设计动画)
+           @keyframes 动画名称 {
+             ....
+           }
+           (1) from... to... 
+               from 开始状态, to 结束状态,
+               from 和 to 只有两个状态, 如果是复杂动画, 不行了
+           (2) 如果是复杂动画, 可以设置百分比
+
+        2. 使用动画
+           animation: 动画名称 动画时间; (必加属性)
+           animation: 动画名称 动画时间 动画次数 动画效果;
+           animation: zhuan 2s infinite linear;
+    */
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px auto;
+      /* infinite 表示无限次 linear 匀速 */
+      /* animation: zhuan 2s infinite linear; */
+      animation: play 4s infinite linear;
+    }
+    /* 设计动画, 一一对应 */
+    @keyframes zhuan {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* 需求: 宽度 200 => 400 => 200 => 800 => 200 */
+    @keyframes play {
+      0% {
+        width: 200px;
+      }
+      25% {
+        width: 400px;
+      }
+      50% {
+        width: 200px;
+      }
+      75% {
+        width: 800px;
+      }
+      100% {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div></div>
+  
+</body>
+</html>

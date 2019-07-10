@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 设置视口 
+        1. width=device-width 设置视口的宽度等于设备宽度  (重要!!!)
+        2. user-scalable=no   不允许用户缩放
+        3. initial-scale=1.0  初始缩放比 1.0 不缩放
+        4. maximum-scale=1.0  最大缩放比 1.0
+        5. minimum-scale=1.0  最小缩放比 1.0
+
+       快键键: meta:vp + tab键
+  -->
+  <!-- <meta name="viewport" content="width=device-width"> -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <!-- 先删除默认vscode生成的视口 -->
+  <!-- 
+    现象：
+      如果一个盒子， 在移动端展示
+        1. 缩放了
+        2. html的宽度都是 980px
+
+    原因： 历史原因   乔布斯
+      早期，只有pc端的网页，网页的版心都是980px, 980px宽度的网页, 在手机端访问, 效果极差!!!
+      为了能够让手机端, 更好的访问pc端网页, 发明了 视口
+
+
+      视口, 是一个容器, 可以盛放 html 网页, 可以缩放, 宽度980px
+      视口的存在, 就是为了解决 手机端 查看pc网页 的问题 
+
+    现在, 手机端, 一般访问的都是手机端网页, 此时我们需要设置视口
+
+   -->
+  <div></div>
+  
+</body>
+</html>

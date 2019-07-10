@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px auto;
+      /* transition: all 1s;  复合属性, 合写形式 */
+      /* 1. transition-property 过渡属性 
+            特殊值: all 表示对于所有属性都过渡  (all, 从性能损耗上比单个大, 了解)
+            多个属性通过逗号隔开
+      */
+      /* transition-property: all; */
+
+      /* 2. transition-duration 过渡时间 */
+      /* transition-duration: 1s; */
+
+      /* 3. transition-timing-function 过渡效果, 过渡速度 
+            (1) ease 默认值, 缓动, 先慢 后快 再慢  (秋千)
+            (2) linear 匀速
+            (3) ease-in-out 更明显的缓动
+            (4) steps(步数)   将动画分几步执行  一般用于实现帧动画
+      */
+      /* transition-timing-function: steps(10); */
+
+      /* 4. transition-delay 过渡延迟 */
+      /* transition-delay: 2s; */
+
+      /* 连写: 没有严格的顺序要求, 唯一的要求, 过渡动画的时间写在过渡延迟的前面 */
+      /* transition: all 1s 2s linear; */
+    }
+    div:hover {
+      width: 400px;
+      height: 400px;
+      background-color: green;
+      /* transform: rotate(360deg); */
+    }
+  
+  </style>
+</head>
+<body>
+
+  <div></div>
+
+<!-- 
+  过渡四大属性小结:
+    1. transition-property 过渡属性 
+       特殊值 all 对于所有属性过渡
+       多个属性通过 逗号 隔开
+    2. transition-duration 过渡时间
+    3. transition-timing-function 过渡效果
+       (1) ease  缓动  先慢后快再慢
+       (2) linear 匀速
+       (3) ease-in-out 更明显的缓动
+       (4) steps(步数)
+    4. transition-delay 过渡延迟
+
+  合写注意点: 过渡时间要在过渡延迟的前面!!!!
+-->
+  
+</body>
+</html>

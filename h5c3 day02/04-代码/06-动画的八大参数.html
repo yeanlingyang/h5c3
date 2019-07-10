@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      margin: 100px auto;
+      /* 使用动画 */
+      /* animation: 动画名称 动画时间 动画次数 动画效果*/
+      /* animation: play 1s infinite linear; */
+
+      /* 1. animation-name 动画名称 */
+      /* animation-name: play; */
+
+      /* 2. animation-duration 动画时间 */
+      /* animation-duration: 1s; */
+
+      /* 3. animation-iteration-count 动画次数 
+            infinite 无限次
+      */
+      /* animation-iteration-count: infinite; */
+
+      /* 4. animation-timing-function 动画效果 
+            (1) ease
+            (2) linear
+            (3) ease-in-out
+            (4) steps(步数)
+      */
+      /* animation-timing-function: steps(10); */
+
+      /* 5. animation-delay 动画延迟 */
+      /* animation-delay: 2s; */
+
+      /* 6. animation-direction 动画方向(是否反向执行动画) 
+            (1) normal  正常, 默认值  从 from 到 to
+            (2) reverse 翻转,        从 to 到 from
+            (3) alternate 交替       从 from 到 to, 再从 to 到 from  (常用!!!)
+      */
+      /* animation-direction: alternate; */
+
+      /* 7. animation-fill-mode 设置动画时间之外的状态 
+            特殊值 forwards, 让盒子停留在动画执行完的最终状态
+      */
+      /* animation-fill-mode: forwards; */
+
+      /* 合写: 没有顺序要求, 唯一的要求, 动画时间在延迟时间的前面  */
+      /* animation: play 1s 2 alternate; */
+    }
+
+    /* 8. animation-play-state 动画执行状态 
+          (1) running 执行中 默认值
+          (2) paused  暂停
+    */
+    div:hover {
+      animation-play-state: paused;
+    }
+
+
+    /* 设计一个放大盒子的动画 */
+    @keyframes play {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.5);
+      }
+    }
+  
+  </style>
+</head>
+<body>
+  
+  <div></div>
+
+<!--
+  animation: 动画名称 动画时间 动画次数 动画效果;
+  animation: play 2s infinite linear;
+
+  动画八大参数:
+    1. animation-name 动画名称
+    2. animation-duration 动画时间
+    3. animation-iteration-count 动画次数
+       特殊值: infinite 无限次
+    4. animation-timing-function 动画效果
+       (1) ease
+       (2) linear
+       (3) ease-in-out
+       (4) steps(步数)
+    5. animation-delay 动画延迟
+    6. animation-direction 动画方向
+       (1) normal  从from到to
+       (2) reverse 从to到from 
+       (3) alternate 交替执行, 从from到to, 再从to到from
+    7. animation-fill-mode 设置动画时间之外的状态
+       forwards: 设置盒子停留在动画执行完成时的最终状态
+    8. animation-play-state 设置动画执行状态
+       (1) running 执行中
+       (2) paused 暂停
+    合写: 动画时间写在动画延迟的前面!!!
+-->
+
+</body>
+</html>
