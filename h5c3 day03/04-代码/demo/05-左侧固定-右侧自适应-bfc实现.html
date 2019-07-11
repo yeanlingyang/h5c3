@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .father {
+      height: 600px;
+      background-color: pink;
+    }
+    .left {
+      /* 左侧定宽 */
+      width: 200px;
+      height: 500px;
+      background-color: green;
+      float: left;
+    }
+    .right {
+      /* 右侧自适应, 一定不要设置宽度 */
+      height: 550px;
+      background-color: blue;
+      /* 触发了bfc, 触发了bfc的盒子, 不会和浮动的元素呆在一起 */
+      overflow: hidden;
+    }
+
+    /* 
+      实现左侧固定-右侧自适应
+      1. 让左边的盒子左浮动
+      2. 给右边的盒子设置 overflow: hidden;
+    */
+  
+  </style>
+</head>
+<body>
+
+  <div class="father">
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+  
+</body>
+</html>

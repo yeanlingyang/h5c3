@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .father {
+      height: 600px;
+      background-color: pink;
+    }
+    .left {
+      height: 550px;
+      background-color: green;
+      overflow: hidden;
+    }
+    .right {
+      width: 200px;
+      height: 500px;
+      background-color: blue;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    1. 让右侧的盒子右浮动
+    2. 给左边的盒子设置overflow:hidden
+
+    注意点: 必须让右侧浮动元素先布局
+   -->
+  <div class="father">
+    <div class="right"></div>
+    <div class="left"></div>
+  </div>
+  
+</body>
+</html>

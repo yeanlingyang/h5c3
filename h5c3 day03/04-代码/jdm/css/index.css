@@ -1,0 +1,267 @@
+/* ----- jd_container ----------- */
+.jd_container {
+  width: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+/* --------- jd_header ---------- */
+.jd_header {
+  width: 100%;
+  height: 40px;
+  background-color: #dd2a2d;
+  /* 定位的盒子, 如果不设置 left top, 默认在标准流的位置显示 */
+  position: fixed;
+  top: 0;
+  max-width: 640px;
+  min-width: 320px;
+  z-index: 999;
+}
+.jd_header .logo {
+  width: 75px;
+  height: 40px;
+  float: left;
+  padding-left: 8px;
+  padding-top: 8px;
+}
+.jd_header .logo i {
+  width: 57px;
+  height: 22px;
+  display: block;
+  /* 设计师为了显示更清晰, 准备的精灵图, 也是2倍图 */
+  /* 背景图像的大小, 也要调整成一半大小 */
+  background-position: 0 -109px; 
+}
+
+
+.jd_header .login {
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: right;
+}
+.jd_header .login a {
+  display: block;
+  color: #fff;
+}
+.jd_header .search {
+  height: 40px;
+  overflow: hidden;
+  padding-top: 5px;
+  position: relative;
+}
+.jd_header .search input {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 35px;
+}
+.jd_header .search i {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-position: -60px -109px;
+}
+
+
+/* ----------- jd_nav ---------- */
+.jd_nav li {
+  float: left;
+  width: 20%;
+}
+.jd_nav li a {
+  padding: 10px 0;
+  display: block;
+}
+.jd_nav li img {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+.jd_nav li p {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* -------- jd_news -------- */
+.jd_news {
+  height: 30px;
+  background-color: #fff;
+  margin: 0 10px;
+  border-radius: 5px;
+  padding-left: 90px;
+  padding-right: 40px;
+  position: relative;
+}
+.jd_news .logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90px;
+  height: 30px;
+  padding-left: 6px;
+  padding-top: 6px;
+}
+.jd_news .logo img {
+  width: 73px;
+  height: 16px;
+}
+.jd_news .more {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.jd_news .more a {
+  display: block;
+}
+.jd_news .info {
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+.jd_news .info li {
+  height: 30px;
+  line-height: 30px;;
+}
+
+/* ----------- 秒杀模块  ------------ */
+.seckill_title {
+  height: 30px;
+  line-height: 30px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+.seckill_title .clock {
+  height: 30px;
+  padding-left: 35px;
+  position: relative;
+}
+.seckill_title .clock i {
+  width: 20px;
+  height: 22px;
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  background-position: -83px -109px;
+}
+.seckill_title .clock span {
+  color: #d6323e;
+}
+.seckill_title .time {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.seckill_title .time span {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  float: left;
+  border-radius: 3px;
+}
+.seckill_title .time span:nth-child(2n) {
+  background-color: #fff;
+  color: #000;
+  width: 8px;
+}
+.seckill_title .more a {
+  display: block;
+  padding-right: 10px;
+}
+
+.seckill_content {
+  background-color: #fff;
+  overflow: auto;
+}
+.seckill_content ul {
+  width: 2000px;
+}
+.seckill_content li {
+  width: 87px;
+  float: left;
+  position: relative;
+}
+/* 
+  1. content属性必须设置
+  2. 默认行内元素
+*/
+.seckill_content li::before {
+  content: "";
+  width: 2px;
+  height: 70px;
+  background-color: #e6e6e6;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.seckill_content li:last-child::before {
+  display: none;
+}
+
+.seckill_content li img {
+  width: 60px;
+  height: 60px;
+  margin: 6px auto;
+}
+.seckill_content li p {
+  text-align: center;
+}
+.seckill_content li .price {
+  color: #e8352f;
+  font-weight: bold;
+}
+.seckill_content li .oldprice {
+  text-decoration: line-through;
+}
+
+/* ------------ jd_shopping --------- */
+.jd_shopping a {
+  float: left;
+  width: 33.3%;
+}
+
+
+/* ------------ jd_product ---------- */
+.jd_product ul {
+  overflow: hidden;
+}
+.jd_product li {
+  float: left;
+  width: 50%;
+}
+.jd_product ul:nth-child(1) li {
+  width: 33.3%;
+}
+
+/* ----------- jd_footer ---------- */
+.jd_footer {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  max-width: 640px;
+  min-width: 320px;
+}
+.jd_footer li {
+  float: left;
+  width: 20%;
+}
+.jd_footer li img {
+  width: 65px;
+  height: 50px;
+  margin: 0 auto;
+}
