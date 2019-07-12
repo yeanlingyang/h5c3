@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>携程首页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .xc_container {
+      width: 100%;
+      max-width: 640px;
+      min-width: 320px;
+      margin: 0 auto;
+    }
+
+    .xc_banner img {
+      display: block;
+      width: 100%;
+    }
+
+    /* --------------- xc_nav --------------- */
+    .xc_nav .nav_item {
+      height: 90px;
+      background-color: green;
+      margin-top: 20px;
+      border-radius: 5px;
+      display: flex;
+    }
+
+    .xc_nav .nav_item:nth-child(1) {
+      background-color: #FF697A;
+    }
+
+    .xc_nav .nav_item:nth-child(2) {
+      background-color: #3D98FF;
+    }
+
+    .xc_nav .nav_item:nth-child(3) {
+      background-color: green;
+    }
+
+    .xc_nav .nav_item:nth-child(4) {
+      background-color: orange;
+    }
+
+    .xc_nav .nav_item .title {
+      flex: 1;
+    }
+
+    .xc_nav .nav_item .content {
+      flex: 2;
+      display: flex;
+      /* 让子元素溢出换行显示 */
+      flex-wrap: wrap;
+    }
+
+    /* 只要父元素设置了 display: flex; 所有的子元素就被flex布局所管理
+       此时, 不管显示模式了, 都可以直接设置宽高
+    */
+    .xc_nav .nav_item .content a {
+      width: 50%;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      box-sizing: border-box;
+    }
+
+    .xc_nav .nav_item .content a:nth-last-child(-n+2) {
+      border-bottom: none;
+    }
+
+    /* 需要对第4个nav_item进行单独定制 */
+    .xc_nav .nav_item:nth-child(4) .content a {
+      width: 33.3%;
+    }
+    /* 找到第一个a, 去掉左边框 */
+    .xc_nav .nav_item:nth-child(4) .content a:nth-child(1) {
+      border-left: none;
+    }
+    .xc_nav .nav_item:nth-child(4) .content a:nth-child(4) {
+      border-left: none;
+      border-bottom: none;
+    }
+
+    /* -------------- .xc_product ------------- */
+    .xc_product {
+      display: flex;
+    }
+    .xc_product a {
+      flex: 1;
+    }
+    .xc_product a img {
+      display: block;
+      width: 100%;  
+    }
+
+    /* ---------- .xc_footer -------------- */
+    .xc_footer ul {
+      height: 30px;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      display: flex;
+    }
+    .xc_footer ul li {
+      flex: 1;
+      text-align: center;
+      line-height: 30px;
+    }
+    .xc_footer ul li a {
+      color: #000;
+      text-decoration: none;
+    }
+    .xc_footer p {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="xc_container">
+    <div class="xc_banner">
+      <a href="#"><img src="images/banner.jpg" alt=""></a>
+    </div>
+    <div class="xc_nav">
+      <div class="nav_item">
+        <div class="title"></div>
+        <div class="content">
+          <a href="#">海外酒店</a>
+          <a href="#">团购</a>
+          <a href="#">特价酒店</a>
+          <a href="#">民宿客栈</a>
+        </div>
+      </div>
+      <div class="nav_item">
+        <div class="title"></div>
+        <div class="content">
+          <a href="#">海外酒店</a>
+          <a href="#">团购</a>
+          <a href="#">特价酒店</a>
+          <a href="#">民宿客栈</a>
+        </div>
+      </div>
+      <div class="nav_item">
+        <div class="title"></div>
+        <div class="content">
+          <a href="#">海外酒店</a>
+          <a href="#">团购</a>
+          <a href="#">特价酒店</a>
+          <a href="#">民宿客栈</a>
+        </div>
+      </div>
+      <div class="nav_item">
+        <div class="content">
+          <a href="#">海外酒店</a>
+          <a href="#">团购</a>
+          <a href="#">海外酒店</a>
+          <a href="#">团购</a>
+          <a href="#">特价酒店</a>
+          <a href="#">民宿客栈</a>
+        </div>
+      </div>
+    </div>
+    <div class="xc_product">
+      <a href="#"><img src="images/extra_1.png" alt=""></a>
+      <a href="#"><img src="images/extra_2.png" alt=""></a>
+    </div>
+    <div class="xc_footer">
+      <ul>
+        <li><a href="#">电话预订</a></li>
+        <li><a href="#">下载客户端</a></li>
+        <li><a href="#">我的</a></li>
+      </ul>
+      <p> 网站地图 | ENGLISH | 电脑版</p>
+      <p>©2015 携程旅行</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

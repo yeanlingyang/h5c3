@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 
+      css3中, 新出了一个媒体查询, 可以动态查询屏幕宽度, 动态给盒子设置样式
+
+      语法:
+        @media screen and 条件
+        1. min-width 样式生效的最小宽    屏幕宽度大于等于该宽度时, 样式生效
+        2. max-width 样式生效的最大宽    屏幕宽度小于等于该宽度时, 样式生效
+        3. width     样式生效的宽度      只有屏幕宽度等于该宽度时, 样式生效
+
+        多个条件写法:
+          @media screen and 条件 and 条件 ...
+
+      注意点: 媒体查询只是给样式添加了一个生效的条件, 不会影响选择器权重
+    */
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+    /* 样式生效的最小宽 600px, >= 600px 样式生效 
+       媒体查询只是给样式添加了一个生效的条件, 写法外边和里面一模一样
+    */
+    @media screen and (min-width: 600px) {
+      div {
+        /* width: 400px;
+        height: 400px;
+        background-color: blue; */
+      }
+    }
+
+    /* 样式生效的最大宽 800px  <= 800px 样式生效 */
+    @media screen and (max-width: 800px) {
+      div {
+        /* width: 500px;
+        height: 500px;
+        background-color: skyblue; */
+      }
+    }
+
+    /* 样式在 600 - 800 之间 生效 */
+    @media screen and (min-width: 600px) and (max-width: 800px) {
+      div {
+        /* width: 300px;
+        height: 300px;
+        background-color: red; */
+      }
+    }
+
+    /* 样式只在 800 的宽度屏幕中生效   */
+    @media screen and (width: 800px) {
+      div {
+        background-color: green;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div></div>
+  
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .father {
+      width: 600px;
+      height: 400px;
+      border: 3px solid #000;
+      margin: 100px auto;
+      display: flex;
+      /* 设置子元素内容溢出, 换行显示 */
+      flex-wrap: wrap;
+      
+      /* align-items 控制单行侧轴对齐方式 
+         align-content 控制多行侧轴的对齐方式 (主要侧轴多行了, 通过 align-content设置 )
+          (1) flex-start
+          (2) flex-end
+          (3) center
+          (4) stretch
+          (5) space-around 空白间隙环绕显示
+          (6) space-between 空白间隙盒子之间显示(两侧没有)
+          (7) space-evenly 空白间隙平均分布
+      */
+      align-content: space-evenly;
+    }
+    /* 
+      在flex布局中, 默认是单行显示, 如果子元素的内容之和溢出父元素, 此时会自动压缩子盒子宽度显示
+
+      flex-wrap 可以设置换行
+        (1) nowrap  不换行 默认值
+        (2) wrap    换行
+    */
+    .son {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      border: 1px solid red; 
+      box-sizing: border-box;
+
+
+
+    }
+  
+  </style>
+</head>
+<body>
+
+  <div class="father">
+    <div class="son">1</div>
+    <div class="son">2</div>
+    <div class="son">3</div>
+    <div class="son">4</div>
+    <div class="son">5</div>
+    <div class="son">6</div>
+    <div class="son">7</div>
+    <div class="son">8</div>
+    <div class="son">9</div>
+  </div>
+  
+</body>
+</html>

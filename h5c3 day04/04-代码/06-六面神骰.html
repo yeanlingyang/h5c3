@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    body {
+      background-color: hotpink;
+    }
+
+    ul {
+      width: 150px;
+      height: 150px;
+      background-color: #fff;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    li {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #000;
+    }
+
+    /* 第一个 ul */
+    ul:nth-child(1) {
+      display: flex;
+      /* 主轴对齐方式 */
+      justify-content: center;
+      /* 侧轴单行对齐方式 */
+      align-items: center;
+    }
+
+    /* 第二个 ul */
+    ul:nth-child(2) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+
+    /* 第三个 ul */
+    ul:nth-child(3) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 0;
+      box-sizing: border-box;
+    }
+
+    ul:nth-child(3) li:nth-child(1) {
+      align-self: flex-start;
+    }
+
+    ul:nth-child(3) li:nth-child(3) {
+      align-self: flex-end;
+    }
+
+    /* 第4个面 */
+    ul:nth-child(4) {
+      display: flex;
+      /* 设置内容溢出换行显示 */
+      flex-wrap: wrap;
+      justify-content: space-around;
+      /* 侧轴多行, 通过 align-content 设置 */
+      align-content: space-around;
+    }
+
+    ul:nth-child(4) li {
+      margin: 0 20px;
+    }
+
+    /* 第5个面 */
+    ul:nth-child(5) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-around;
+    }
+
+    ul:nth-child(5) li {
+      margin: 0 20px;
+    }
+
+    ul:nth-child(5) li:nth-child(3) {
+      margin: 0 60px;
+    }
+
+
+    /* 第6个面 */
+    ul:nth-child(6) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-around;
+    }
+    ul:nth-child(6) li {
+      margin: 0 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul>
+    <li></li>
+  </ul>
+
+  <ul>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+</body>
+
+</html>

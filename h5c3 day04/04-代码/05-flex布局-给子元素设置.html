@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .father {
+      width: 600px;
+      height: 400px;
+      border: 3px solid #000;
+      margin: 100px auto;
+      display: flex;
+      /* 设置侧轴方向对齐方式, 居中对齐 */
+      align-items: center;
+    }
+    /* 
+      给子元素设置的属性:
+        1. flex 可以用于按照份数分配父元素的剩余空间, 会优先分配设置宽高的盒子   (常用!!!)
+           应用: 圣杯布局, 两边固定中间自适应  
+
+        2. order 用于排序, order设置元素的顺序, order数值越小, 越靠前, 默认值 0  (了解)
+
+        3. align-self 设置该元素在单行侧轴的对齐方式   是用来覆盖 align-items的
+           优先级, align-self > align-items
+            (1) flex-start
+            (2) flex-end
+            (3) center
+            (4) stretch
+    */
+   
+    .son {
+      height: 100px;
+      background-color: pink;
+      border: 1px solid red;
+      box-sizing: border-box;
+      /* 表示在父元素中占2份 */
+      /* flex: 2; */
+    }
+    .son:nth-child(1) {
+      width: 100px;
+      align-self: flex-start;
+    }
+    .son:nth-child(2) {
+      flex: 1;
+    }
+    .son:nth-child(3) {
+      width: 100px;
+      align-self: flex-end;
+    }
+  
+  </style>
+</head>
+<body>
+
+  <div class="father">
+    <div class="son">1</div>
+    <div class="son">2</div>
+    <div class="son">3</div>
+  </div>
+  
+</body>
+</html>
