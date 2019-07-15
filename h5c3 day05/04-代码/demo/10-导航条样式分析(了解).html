@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+
+  <!-- 
+    1. container-fluid 流式布局容器, 宽度100%
+       替换成 container
+
+    2. 去掉一些没用的东西
+       (1) aria- 开头的属性, 给盲人设备看的, 直接删
+       (2) 有sr-only类的标签, 可以直接删
+
+  -->
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- 大标题 和 切换按钮, 在移动端有更好的显示 -->
+      <div class="navbar-header">
+        <!-- 用于切换的按钮 -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- 大标题 -->
+        <a class="navbar-brand" href="#">大标题</a>
+      </div>
+
+      <!-- 用于切换显示的内容 -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- 左侧ul -->
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">我要投资</a></li>
+          <li><a href="#">我要借贷</a></li>
+          <li><a href="#">平台介绍</a></li>
+          <li><a href="#">新手专区</a></li>
+          <li><a href="#">最新动态</a></li>
+          <li><a href="#">微平台</a></li>
+        </ul>
+        <!-- 右侧ul -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">个人中心</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- 如果用到了组件或者js插件, 还需要引入 js -->
+  <script src="jquery/jquery-1.12.4.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>

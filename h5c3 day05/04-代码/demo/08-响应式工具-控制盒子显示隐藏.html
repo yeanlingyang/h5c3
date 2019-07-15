@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+
+    @media (max-width: 992px) {
+      div {
+        /* display: none; */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 需求: 一个盒子大屏, 中屏显示,  小屏, 超小屏隐藏 
+       0-768-992-1200~
+
+       小屏, 超小屏隐藏 =>  <= 992 时, 隐藏
+
+       bootstrap中预定义了一些控制盒子显示隐藏的类
+       1. hidden     所有屏幕都隐藏  display: none;
+       2. hidden-xs  超小屏隐藏, 其他屏不管
+       3. hidden-sm  小屏幕隐藏, 其他屏不管
+       4. hidden-md  中屏幕隐藏, 其他屏不管
+       5. hidden-lg  大屏幕隐藏, 其他屏不管
+  -->
+  <div class="hidden-xs hidden-sm"></div>
+  
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+  height: 3000px;
+}
+
+/* bootstrap 进行样式重置, 但是没有将所有的样式都重置 */
+i {
+  font-style: normal;
+}
+
+/* 去除下划线 */
+/* lvha */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+a {
+  color: #333;
+}
+a:hover {
+  /* 微金所红  网站的主题色 */
+  color: #e92322;
+}
+
+
+/* wjs_header */
+.wjs_header {
+  height: 41px;
+  border-bottom: 1px solid #ccc;
+}
+.wjs_header .item {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+.wjs_header .item:last-child {
+  border-right: none;
+}
+.wjs_header .mobile {
+  position: relative;
+  display: block;
+}
+.wjs_header .mobile:hover .code {
+  display: block;
+}
+.wjs_header .mobile .code {
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.wjs_header .btn {
+  padding: 2px 12px;
+}
+.wjs_header .btn-link {
+  color: #333;
+  text-decoration: none;
+}
+.wjs_header .btn-link:hover {
+  color: #e92322;
+}
+
+
+/* ------------ wjs_nav ---------- */
+.wjs_nav {
+  border-bottom: 1px solid #ccc;
+}
+.wjs_nav .navbar-default {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+}
+.wjs_nav .navbar-nav > li > a {
+  height: 80px;
+  line-height: 50px;
+}
+.wjs_nav .navbar-nav > li > a:hover {
+  border-bottom: 2px solid #e92322;
+}
+.wjs_nav .navbar-default .navbar-nav > .active > a, 
+.wjs_nav .navbar-default .navbar-nav > .active > a:hover, 
+.wjs_nav .navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  /* 添加自己的样式 */
+  border-bottom: 2px solid #e92322;
+}
+
+.wjs_nav .navbar-brand {
+  height: 80px;
+  line-height: 50px;
+}
+.wjs_nav .wjs_icon_logo {
+  font-size: 50px;
+  color: #e92322;
+  vertical-align: middle;
+}
+.wjs_nav .wjs_icon_word {
+  font-size: 36px;
+  color: #000;
+  vertical-align: middle;
+}
+
+.wjs_nav .navbar-toggle {
+  margin-top: 23px;
+}
+
+/* 大图片的样式, 定位居中的样式, 只在 >= 768 的屏幕中生效 */
+@media (min-width: 768px) {
+  .wjs_banner {
+    position: relative;
+    overflow: hidden;
+    height: 410px;
+  }
+  .wjs_banner img {
+    height: 410px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}
+
+/* 小图片的样式  <= 768 */
+@media (max-width: 768px) {
+  .wjs_banner img {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+/* ------ wjs_info ------------- */
+.wjs_info {
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+.wjs_info .wjs_icon_info {
+  font-size: 30px;
+}

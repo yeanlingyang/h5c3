@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <style>
+    .container {
+      height: 500px;
+      border: 1px solid #000;
+    }
+    .box {
+      height: 100px;
+      border: 1px solid blue;
+      /* float: left;
+      width: 50%; */
+    }
+  </style>
+</head>
+<body>
+  
+<!-- 需求: 一行里面有两个盒子, 各占用一半空间 -->
+<!-- 
+  .col-lg-6   在大屏幕以上占6份,   栅格系统将一行分成12份,  6份就是50%
+
+  栅格系统: 将一行分成了12份, 只是为了布局方便
+
+  栅格系统底层原理: 浮动 + 百分比 + 媒体查询
+
+  语法:
+    .col-xx-x  
+      lg  large   大屏幕以上生效
+      md  middle  中屏幕以上生效
+      sm  small   小屏幕以上生效
+      xs  xSmall  所有屏幕都生效
+ -->
+
+<!-- 响应式版心 container -->
+<div class="container">
+  <!-- 在中屏幕以上, 显示一个宽度50%, 左浮动的一个盒子 -->
+  <div class="box col-md-6 col-lg-4"></div>
+  <div class="box col-md-6 col-lg-4"></div>
+</div>
+
+
+</body>
+</html>

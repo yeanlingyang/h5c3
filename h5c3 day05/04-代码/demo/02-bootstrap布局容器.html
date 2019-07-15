@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <style>
+    .container {
+      height: 500px;
+      border: 3px solid #000;
+    }
+    .container-fluid {
+      height: 300px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 利用媒体查询, 实现让不同宽度屏幕有不同的版心, 移动端宽度100% 
+
+    响应式容器1: container   (常用)
+      特点:
+        1. 响应式版心, 在不同宽度屏幕中, 有不同的版心
+        2. 默认有左右 15px 的 padding
+
+    响应式容器2: container-fluid  (了解)
+      特点:
+        1. 流式布局容器, 宽度100%
+        2. 默认有左右的 15px padding
+
+    row类, 作用: 用于抵消父元素的左右15px padding值
+       底层原理: 通过margin负值实现的
+  -->
+  <div class="container">
+    <div class="row">
+        我是文字
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+        我是内容
+    </div>
+  </div>
+  
+</body>
+</html>
