@@ -1,0 +1,49 @@
+// 1. 后代选择器, 可以直接嵌套编写
+// 2. 子代选择器, 直接 >
+// 3. 交集选择器, &表示自己
+// 4. 并集选择器, 直接加 ,
+// 5. 伪元素 ::before ::after   通过 & 表示自己
+
+.father {
+  width: 600px;
+  height: 600px;
+  background-color: skyblue;
+  
+
+  &::before {
+    content: "";
+  }
+
+  // 交集选择器
+  &.active {
+    background-color: blue;
+  }
+
+  // 子代选择器
+  > .son {
+    width: 400px;
+    height: 400px;
+    background-color: green;
+    // 后代选择器
+    .sun {
+      width: 200px;
+      height: 200px;
+      background-color: purple;
+      color: #fff;
+    }
+  }
+
+  .son2 {
+    width: 200px;
+    height: 200px;
+    background-color: purple;
+  }
+
+  // 并集选择器
+  .box1,
+  .box2 {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+  }
+}

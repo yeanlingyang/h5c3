@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+  <!-- 
+    1. 删除一些没用的
+       aria- 开头的属性可以直接删
+       sr-only类的标签, 可以直接删
+       role 属性, 可以直接删
+
+    2. 在bootstrap中, data- 开头的属性, 不要删!!  是有功能的
+       bootstrap 就是利用 data- 开头的属性, 来添加 js 功能的
+       data-toggle="tab"  告诉浏览器, 这边要切换的是 tab栏
+
+    3. 通过 id, 将导航和面板关联在一起的
+   -->
+
+
+  <div>
+
+    <!-- 用于点击切换的导航按钮 -->
+    <ul class="nav nav-tabs">
+      <li  class="active"><a href="#product01"  data-toggle="tab">特别推荐</a></li>
+      <li ><a href="#product02"  data-toggle="tab">微平台1</a></li>
+      <li ><a href="#product03"  data-toggle="tab">微平台2</a></li>
+      <li ><a href="#product04" data-toggle="tab">微平台3</a></li>
+      <li ><a href="#product05" data-toggle="tab">微平台4</a></li>
+      <li ><a href="#product06" data-toggle="tab">微平台5</a></li>
+      <li ><a href="#product07" data-toggle="tab">微平台6</a></li>
+    </ul>
+
+
+    <!-- 用于切换显示的面板 -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="product01">面板1</div>
+      <div class="tab-pane" id="product02">面板2</div>
+      <div class="tab-pane" id="product03">面板3</div>
+      <div class="tab-pane" id="product04">面板4</div>
+      <div class="tab-pane" id="product05">面板5</div>
+      <div class="tab-pane" id="product06">面板6</div>
+      <div class="tab-pane" id="product07">面板7</div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <!-- 如果用到了组件或者js插件, 还需要引入 js -->
+  <script src="jquery/jquery-1.12.4.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>

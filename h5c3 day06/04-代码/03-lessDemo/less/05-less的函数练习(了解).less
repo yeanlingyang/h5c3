@@ -1,0 +1,23 @@
+// 边框圆角, 有兼容性, 在 IE 8 中不支持, IE9以上支持
+// 一般有时, 需要加上私有前缀, 来兼容低版本的浏览器
+
+// 函数可以支持传递参数
+.border_radius(@value) {
+  -webkit-border-radius: @value;
+  -ms-border-radius: @value;
+  -o-border-radius: @value;
+  -moz-border-radius: @value;
+  border-radius: @value;
+}
+
+.box1 {
+  .border_radius(10px);
+  width: 200px;
+  height: 200px;
+}
+
+.box2 {
+  .border_radius(20px);
+  width: 300px;
+  height: 300px;
+}

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>微金所</title>
+  <link rel="icon" href="favicon.ico">
+  <!-- 引入设计师提供的字体图标css -->
+  <link rel="stylesheet" href="fonts/iconfont.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+  <!-- 
+  微金所构建:
+    1. 建目录, 配图标
+    2. 引入css和js  (bootstrap的css和js)   (自己的css)
+    3. 引入设计师提供的字体图标
+    4. 进行项目模块的划分
+ -->
+  <!-- 
+    使用设计师提供的字体图标
+    1. 添加基础类 .wjs_icon
+    2. 具体显示哪个图标 .wjs_icon_logo
+
+  -->
+  <!-- <i style="font-size: 100px; font-style: normal;" class="wjs_icon wjs_icon_logo"></i> -->
+
+  <!-- 
+  响应式开发步骤:
+    1. 先看盒子有没有响应式版心
+    2. 进行空间分配(利用栅格布局分配)
+       中屏幕以上 2 5 2 3 分配
+       小屏幕和超小屏幕隐藏  hidden-sm  hidden-xs
+ -->
+
+  <!-- 头部模块 -->
+  <div class="wjs_header hidden-sm  hidden-xs">
+    <div class="container">
+      <div class="col-md-2 item">
+        <a href="#" class="mobile">
+          <i class="wjs_icon wjs_icon_phone"></i>
+          <span>手机微金所</span>
+          <i class="glyphicon glyphicon-menu-down"></i>
+
+          <img class="code" src="images/code.jpg" alt="">
+        </a>
+      </div>
+      <div class="col-md-5 item">
+        <i class="wjs_icon wjs_icon_tel"></i>
+        <span> 4006-89-4006（服务时间：9:00-21:00）</span>
+      </div>
+      <div class="col-md-2 item">
+        <a href="#">常见问题</a>
+        <a href="#">财富登录</a>
+      </div>
+      <div class="col-md-3 item">
+        <button class="btn btn-danger">免费注册</button>
+        <button class="btn btn-link">登录</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+    进行bootstrap样式定制:
+      1. 重置默认的样式, 注意权重
+      2. 添加自己的样式, 只要能作用与标签即可
+   -->
+  <!-- 导航模块 -->
+  <div class="wjs_nav">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- 大标题 和 切换按钮, 在移动端有更好的显示 -->
+        <div class="navbar-header">
+          <!-- 用于切换的按钮 -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- 大标题 -->
+          <a class="navbar-brand" href="#">
+            <i class="wjs_icon wjs_icon_logo"></i>
+            <i class="wjs_icon wjs_icon_word"></i>
+          </a>
+        </div>
+
+        <!-- 用于切换显示的内容 -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <!-- 左侧ul -->
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">我要投资</a></li>
+            <li><a href="#">我要借贷</a></li>
+            <li><a href="#">平台介绍</a></li>
+            <li><a href="#">新手专区</a></li>
+            <li><a href="#">最新动态</a></li>
+            <li><a href="#">微平台</a></li>
+          </ul>
+          <!-- 右侧ul 在小屏幕隐藏-->
+          <ul class="nav navbar-nav navbar-right hidden-sm">
+            <li><a href="#">个人中心</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- 轮播图模块 -->
+  <div class="wjs_banner">
+    <!-- 大图片, 小屏幕 中屏幕 大屏幕 显示, 超小屏幕隐藏 -->
+    <img src="images/slide_01_2000x410.jpg" class="hidden-xs" alt="">
+
+    <!-- 超小屏显示小图片, 其他屏幕隐藏 -->
+    <img src="images/slide_01_640x340.jpg" class="hidden-sm hidden-md hidden-lg" alt="">
+  </div>
+
+  <!-- 信息交易模块 -->
+  <!-- 大屏幕一行3个
+       中屏幕一行3个
+       小屏幕一行2个
+       超小屏幕隐藏
+  -->
+  <div class="wjs_info hidden-xs">
+    <div class="container">
+      <div class="col-sm-6 col-md-4">
+        <a href="#" class="media">
+          <!-- 左侧的图标 -->
+          <div class="media-left">
+            <i class="wjs_icon wjs_icon_info"></i>
+          </div>
+          <!-- 右侧内容 -->
+          <div class="media-body">
+            <h4 class="media-heading">支付交易保障</h4>
+            <p>银联支付全程保证支付安全</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="#" class="media">
+          <!-- 左侧的图标 -->
+          <div class="media-left">
+            <i class="wjs_icon wjs_icon_info"></i>
+          </div>
+          <!-- 右侧内容 -->
+          <div class="media-body">
+            <h4 class="media-heading">支付交易保障</h4>
+            <p>银联支付全程保证支付安全</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="#" class="media">
+          <!-- 左侧的图标 -->
+          <div class="media-left">
+            <i class="wjs_icon wjs_icon_info"></i>
+          </div>
+          <!-- 右侧内容 -->
+          <div class="media-body">
+            <h4 class="media-heading">支付交易保障</h4>
+            <p>银联支付全程保证支付安全</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="#" class="media">
+          <!-- 左侧的图标 -->
+          <div class="media-left">
+            <i class="wjs_icon wjs_icon_info"></i>
+          </div>
+          <!-- 右侧内容 -->
+          <div class="media-body">
+            <h4 class="media-heading">支付交易保障</h4>
+            <p>银联支付全程保证支付安全</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="#" class="media">
+          <!-- 左侧的图标 -->
+          <div class="media-left">
+            <i class="wjs_icon wjs_icon_info"></i>
+          </div>
+          <!-- 右侧内容 -->
+          <div class="media-body">
+            <h4 class="media-heading">支付交易保障</h4>
+            <p>银联支付全程保证支付安全</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a href="#" class="media">
+          <!-- 左侧的图标 -->
+          <div class="media-left">
+            <i class="wjs_icon wjs_icon_info"></i>
+          </div>
+          <!-- 右侧内容 -->
+          <div class="media-body">
+            <h4 class="media-heading">支付交易保障</h4>
+            <p>银联支付全程保证支付安全</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 预约模块 -->
+  <div class="wjs_book">
+    <div class="container">
+      <!-- 左浮动 pull-left -->
+      <div class="pull-left">
+        <i class="wjs_icon wjs_icon_clock"></i>
+        <span>现在有 273 人在排队，累计预约交易成功 7571 次。 什么是预约投标？</span>
+        <a class="book_now" href="#">立即预约</a>
+      </div>
+      <!-- 右浮动 pull-right -->
+      <div class="pull-right hidden-xs">
+        <a href="#">
+          <i class="wjs_icon wjs_icon_video"></i>
+          <span>微金所企业宣传片</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 产品模块 -->
+  <div class="wjs_product">
+    <div class="container">
+      <div class="ul_box">
+        <!-- 用于点击切换的导航按钮 -->
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#product01" data-toggle="tab">特别推荐</a></li>
+          <li><a href="#product02" data-toggle="tab">微平台1</a></li>
+          <li><a href="#product03" data-toggle="tab">微平台2</a></li>
+          <li><a href="#product04" data-toggle="tab">微平台3</a></li>
+          <li><a href="#product05" data-toggle="tab">微平台4</a></li>
+          <li><a href="#product06" data-toggle="tab">微平台5</a></li>
+          <li><a href="#product07" data-toggle="tab">微平台6</a></li>
+        </ul>
+      </div>
+
+
+      <!-- 用于切换显示的面板 -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="product01">
+          <!-- 分析空间分配 
+              大屏幕一行3个, 中屏幕一行3个
+              小屏幕一行2个, 超小屏幕一行1个
+          -->
+          <div class="col-sm-6 col-md-4">
+            <!-- 浮动的元素,要先写 -->
+            <div class="product_item active">
+              <div class="product_item_right">
+                <p class="percent"><strong>8</strong>%</p>
+                <p>年利率</p>
+              </div>
+              <div class="product_item_left">
+                <!-- 定位显示的字体图标 -->
+                <i class="wjs_icon wjs_icon_experience"></i>
+                <h3 class="text-center">新手体验01期</h3>
+                <!-- .col-xs-6 在所有屏幕中都占 50% -->
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <!-- 浮动的元素,要先写 -->
+            <div class="product_item">
+              <div class="product_item_right">
+                <p class="percent"><strong>8</strong>%</p>
+                <p>年利率</p>
+              </div>
+              <div class="product_item_left">
+                <!-- 定位显示的字体图标 -->
+                <i class="wjs_icon wjs_icon_experience"></i>
+                <h3 class="text-center">新手体验01期</h3>
+                <!-- .col-xs-6 在所有屏幕中都占 50% -->
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <!-- 浮动的元素,要先写 -->
+            <div class="product_item">
+              <div class="product_item_right">
+                <p class="percent"><strong>8</strong>%</p>
+                <p>年利率</p>
+              </div>
+              <div class="product_item_left">
+                <!-- 定位显示的字体图标 -->
+                <i class="wjs_icon wjs_icon_experience"></i>
+                <h3 class="text-center">新手体验01期</h3>
+                <!-- .col-xs-6 在所有屏幕中都占 50% -->
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <!-- 浮动的元素,要先写 -->
+            <div class="product_item">
+              <div class="product_item_right">
+                <p class="percent"><strong>8</strong>%</p>
+                <p>年利率</p>
+              </div>
+              <div class="product_item_left">
+                <!-- 定位显示的字体图标 -->
+                <i class="wjs_icon wjs_icon_experience"></i>
+                <h3 class="text-center">新手体验01期</h3>
+                <!-- .col-xs-6 在所有屏幕中都占 50% -->
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <!-- 浮动的元素,要先写 -->
+            <div class="product_item">
+              <div class="product_item_right">
+                <p class="percent"><strong>8</strong>%</p>
+                <p>年利率</p>
+              </div>
+              <div class="product_item_left">
+                <!-- 定位显示的字体图标 -->
+                <i class="wjs_icon wjs_icon_experience"></i>
+                <h3 class="text-center">新手体验01期</h3>
+                <!-- .col-xs-6 在所有屏幕中都占 50% -->
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <!-- 浮动的元素,要先写 -->
+            <div class="product_item">
+              <div class="product_item_right">
+                <p class="percent"><strong>8</strong>%</p>
+                <p>年利率</p>
+              </div>
+              <div class="product_item_left">
+                <!-- 定位显示的字体图标 -->
+                <i class="wjs_icon wjs_icon_experience"></i>
+                <h3 class="text-center">新手体验01期</h3>
+                <!-- .col-xs-6 在所有屏幕中都占 50% -->
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <p>起投金额</p>
+                  <p>0.01万</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="product02">面板2</div>
+        <div class="tab-pane" id="product03">面板3</div>
+        <div class="tab-pane" id="product04">面板4</div>
+        <div class="tab-pane" id="product05">面板5</div>
+        <div class="tab-pane" id="product06">面板6</div>
+        <div class="tab-pane" id="product07">面板7</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 合作伙伴 -->
+  <div class="wjs_partner">
+    <div class="container">
+      <h3>合作伙伴</h3>
+      <ul>
+        <li><a href="#"><i class="wjs_icon wjs_icon_partner01"></i></a></li>
+        <li><a href="#"><i class="wjs_icon wjs_icon_partner02"></i></a></li>
+        <li><a href="#"><i class="wjs_icon wjs_icon_partner03"></i></a></li>
+        <li><a href="#"><i class="wjs_icon wjs_icon_partner04"></i></a></li>
+        <li><a href="#"><i class="wjs_icon wjs_icon_partner05"></i></a></li>
+        <li><a href="#"><i class="wjs_icon wjs_icon_partner06"></i></a></li>
+        <li><a href="#"><i class="wjs_icon wjs_icon_partner07"></i></a></li>
+        <li><a href="#"><i class="wjs_icon wjs_icon_partner08"></i></a></li>
+        <li><a href="#"><i class="wjs_icon wjs_icon_partner09"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- 先引入jquery, 再引入bootstrap.js -->
+  <script src="lib/jquery/jquery-1.12.4.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+/* 1. 在 less 中完全兼容 css 的全部语法 
+   2. 浏览器不能直接识别 less, 我们需要将 less 转换成 css 浏览器才能识别
+   3. 转换 less 成 css 需要安装插件
+      (1) 点击左侧菜单第5个, 扩展按钮
+      (2) 搜索 easy less, 点击安装, 安装完成需要重开vscode
+   4. 插件的配置, 需要配置less编译css后的输出路径
+      "less.compile": {
+        "out": "../css/"
+      }
+*/
+div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: pink;
+}
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}

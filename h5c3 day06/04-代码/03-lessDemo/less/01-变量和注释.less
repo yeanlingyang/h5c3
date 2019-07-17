@@ -1,0 +1,27 @@
+/* less中对于, css的注释完全支持, css的注释会被编译到 css 文件中去 */
+// less中的注释, 不会被编译到 css 文件中去
+
+// 推荐大家使用 //
+
+
+// 变量, 可以变化的量
+// 作用: 可以存储值
+// 语法: 
+//    @变量名 : 变量值;
+
+// 将来css中, 每个网站一般都有自己的主题色, 会被大量重复使用
+@mainColor:green;
+@borderColor: red;
+
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: @mainColor;
+  border: 1px solid @borderColor;
+}
+.box2 {
+  width: 200px;
+  height: 400px;
+  background-color: @mainColor;
+  border: 1px solid @borderColor;
+}

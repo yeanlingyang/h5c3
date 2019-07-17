@@ -1,0 +1,17 @@
+div {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+
+  // 伪类的写法 &表示自己
+  &:hover {
+    // 在 less 中直接支持 加减乘除 运算
+    // less 运算, 将来用于 rem 布局, rem布局单位就是 rem
+    // 但是从设计图中, 量出来的是 px, 所以将来换算时, 需要用到 less的运算
+    width: 200px / 3;
+    height: 200px * 2;
+
+    width: 100px + 150px;
+    width: 100px - 20px;
+  }
+}

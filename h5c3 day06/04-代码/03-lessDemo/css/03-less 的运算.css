@@ -1,0 +1,11 @@
+div {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+div:hover {
+  width: 66.66666667px;
+  height: 400px;
+  width: 250px;
+  width: 80px;
+}

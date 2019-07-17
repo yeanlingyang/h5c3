@@ -1,0 +1,60 @@
+/* 大容器 */
+.jd_container {
+  width: 100%;
+  height: 2000px;
+  background-color: pink;
+  margin: 0 auto;
+  max-width: 640px;
+  min-width: 320px;
+}
+.jd_header {
+  width: 100%;
+  height: 40px;
+  background-color: #dd2a2d;
+  position: fixed;
+  top: 0;
+  max-width: 640px;
+  min-width: 320px;
+  display: flex;
+}
+.jd_header .logo {
+  width: 75px;
+  padding-left: 8px;
+  padding-top: 8px;
+}
+.jd_header .logo i {
+  width: 57px;
+  height: 22px;
+  display: block;
+  background: url("../images/jd-sprites.png") 0 -109px;
+  background-size: 200px 200px;
+}
+.jd_header .search {
+  flex: 1;
+  padding-top: 5px;
+  position: relative;
+}
+.jd_header .search i {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background: url("../images/jd-sprites.png") -60px -109px;
+  background-size: 200px 200px;
+}
+.jd_header .search input {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 35px;
+}
+.jd_header .login {
+  width: 50px;
+  text-align: center;
+  line-height: 40px;
+}
+.jd_header .login a {
+  display: block;
+  color: #fff;
+}

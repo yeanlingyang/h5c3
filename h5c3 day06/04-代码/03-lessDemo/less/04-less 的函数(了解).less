@@ -1,0 +1,39 @@
+// 如果编写css时, 出现了很多重复的部分, 一般会定义一个公共类, 统一使用
+// 之前直接的类名的方式, 需要找到对应的标签, 加上类名
+
+// less中的定义函数语法, 和定义一个类的方式差不多
+// 定义方式: .函数名() { ... }
+
+// 函数, 可以将重复的部分进行封装使用!!!
+
+// 定义了一个公共的浮动函数
+.fl() {
+  float: left;
+}
+.fr() {
+  float: right;
+}
+// 定义公共的按钮函数
+.btn_base() {
+  width: 300px;
+  height: 30px;
+}
+
+.box {
+  // 调用函数, 就会将函数内部的内容, 生成在调用函数的位置
+  .fl();
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+
+.mybtn {
+  .btn_base();
+  .fl();
+  background-color: orange;
+}
+.yourbtn {
+  .btn_base();
+  .fr();
+  background-color: skyblue;
+}

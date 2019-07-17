@@ -1,0 +1,81 @@
+// 定义一个函数, 统一控制 最大宽 和 最小宽
+.width() {
+  max-width: 640px;
+  min-width: 320px;
+}
+
+// 定义一个函数, 专门用于添加精灵图背景
+.jd_sprite(@x, @y) {
+  background: url("../images/jd-sprites.png") @x @y;
+  background-size: 200px 200px;
+}
+
+/* 大容器 */
+.jd_container {
+  width: 100%;
+  height: 2000px;
+  background-color: pink;
+  margin: 0 auto;
+  .width();
+}
+
+// 每一个模块
+.jd_header {
+  width: 100%;
+  height: 40px;
+  background-color: #dd2a2d;
+  position: fixed;
+  top: 0;
+  .width();
+  display: flex;
+
+  // 左侧的logo
+  .logo {
+    width: 75px;
+    padding-left: 8px;
+    padding-top: 8px;
+
+    i {
+      width: 57px;
+      height: 22px;
+      display: block;
+      .jd_sprite(0, -109px);
+    }
+  }
+
+  // 中间的搜索框
+  .search {
+    flex: 1;
+    padding-top: 5px;
+    position: relative;
+
+    i {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      .jd_sprite(-60px, -109px);
+    }
+
+    input {
+      width: 100%;
+      height: 30px;
+      border-radius: 15px;
+      padding-left: 35px;
+    }
+  }
+
+  // 右侧的登录
+  .login {
+    width: 50px;
+    text-align: center;
+    line-height: 40px;
+
+    a {
+      display: block;
+      color: #fff;
+    }
+  }
+}
+

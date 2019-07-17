@@ -1,0 +1,276 @@
+/* bootstrap 进行样式重置, 但是没有将所有的样式都重置 */
+i {
+  font-style: normal;
+}
+
+/* 去除下划线 */
+/* lvha */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+a {
+  color: #333;
+}
+a:hover {
+  /* 微金所红  网站的主题色 */
+  color: #e92322;
+}
+
+
+/* wjs_header */
+.wjs_header {
+  height: 41px;
+  border-bottom: 1px solid #ccc;
+}
+.wjs_header .item {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+.wjs_header .item:last-child {
+  border-right: none;
+}
+.wjs_header .mobile {
+  position: relative;
+  display: block;
+}
+.wjs_header .mobile:hover .code {
+  display: block;
+}
+.wjs_header .mobile .code {
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+  display: none;
+  z-index: 999;
+}
+
+.wjs_header .btn {
+  padding: 2px 12px;
+}
+.wjs_header .btn-link {
+  color: #333;
+  text-decoration: none;
+}
+.wjs_header .btn-link:hover {
+  color: #e92322;
+}
+
+
+/* ------------ wjs_nav ---------- */
+.wjs_nav {
+  height: 81px;
+  border-bottom: 1px solid #ccc;
+  /* 给大盒子设置层级 */
+  position: relative;
+  z-index: 998;
+}
+.wjs_nav .navbar-collapse {
+  background-color: #fff;
+}
+.wjs_nav .navbar-default {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+}
+.wjs_nav .navbar-nav > li > a {
+  height: 80px;
+  line-height: 50px;
+}
+.wjs_nav .navbar-nav > li > a:hover {
+  border-bottom: 2px solid #e92322;
+}
+.wjs_nav .navbar-default .navbar-nav > .active > a, 
+.wjs_nav .navbar-default .navbar-nav > .active > a:hover, 
+.wjs_nav .navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  /* 添加自己的样式 */
+  border-bottom: 2px solid #e92322;
+}
+
+.wjs_nav .navbar-brand {
+  height: 80px;
+  line-height: 50px;
+}
+.wjs_nav .wjs_icon_logo {
+  font-size: 50px;
+  color: #e92322;
+  vertical-align: middle;
+}
+.wjs_nav .wjs_icon_word {
+  font-size: 36px;
+  color: #000;
+  vertical-align: middle;
+}
+
+.wjs_nav .navbar-toggle {
+  margin-top: 23px;
+}
+
+/* 大图片的样式, 定位居中的样式, 只在 >= 768 的屏幕中生效 */
+@media (min-width: 768px) {
+  .wjs_banner {
+    position: relative;
+    overflow: hidden;
+    height: 410px;
+  }
+  .wjs_banner img {
+    height: 410px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}
+
+/* 小图片的样式  <= 767 */
+@media (max-width: 767px) {
+  .wjs_banner img {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+/* ------ wjs_info ------------- */
+.wjs_info {
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+.wjs_info .wjs_icon_info {
+  font-size: 30px;
+}
+
+/* ------- wjs_book --------- */
+.wjs_book {
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+.wjs_book i {
+  font-size: 18px;
+}
+.wjs_book .book_now {
+  color: #e92322;
+  border-bottom: 1px dashed #e92322;
+}
+
+
+/* ------------- wjs_product ----------- */
+.wjs_product {
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: #f7f7f7;
+}
+
+.wjs_product  .nav-tabs > li.active > a, 
+.wjs_product  .nav-tabs > li.active > a:hover, 
+.wjs_product  .nav-tabs > li.active > a:focus {
+  background: transparent;
+  border: none;
+  /* 添加 active的盒子下的 a 的下边框, 添加自己的样式 */
+  border-bottom: 2px solid #e92322;
+}
+.wjs_product  .nav-tabs > li > a {
+  border: none;
+  /* 给所有状态的 a 都加一个透明的下边框 */
+  border-bottom: 2px solid transparent;
+}
+.wjs_product  .nav > li > a:hover, 
+.wjs_product  .nav > li > a:focus {
+  background: transparent;
+}
+
+
+/* 将来宽度是通过 js 动态计算, 求得宽度设置的 */
+.wjs_product .nav-tabs {
+  width: 700px;
+}
+.wjs_product .ul_box {
+  /* 自动根据内容是否溢出, 决定是否显示滚动条 */
+  overflow: auto;
+}
+.wjs_product .product_item {
+  height: 150px;
+  background-color: pink;
+  margin-top: 20px;
+}
+.wjs_product .product_item.active {
+  background-color: #e92322;
+  color: #fff;
+}
+
+.wjs_product .product_item_right {
+  float: right;
+  width: 80px;
+  height: 100%;
+  position: relative;
+  border-left: 1px dashed blue;
+  padding-top: 30px;
+  text-align: center;
+}
+.wjs_product .product_item_right .percent {
+  font-size: 20px;
+}
+.wjs_product .product_item_right .percent strong {
+  font-size: 40px;
+}
+
+.wjs_product .product_item_right::before,
+.wjs_product .product_item_right::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  background-color:#f7f7f7;
+  z-index: 666;
+}
+.wjs_product .product_item_right::before {
+  top: -10px;
+}
+.wjs_product .product_item_right::after {
+  bottom: -10px;
+}
+
+
+
+.wjs_product .product_item_left {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+.wjs_product .product_item_left h3 {
+  font-size: 20px;
+}
+.wjs_product .product_item_left p {
+  margin-bottom: 4px;
+}
+.wjs_product .product_item_left .wjs_icon_experience {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  font-size: 40px;
+}
+
+/* ------------ wjs_partner------------ */
+.wjs_partner {
+  text-align: center;
+}
+.wjs_partner ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wjs_partner ul li {
+  display: inline-block;
+  font-size: 60px;
+  margin: 0 30px;
+}

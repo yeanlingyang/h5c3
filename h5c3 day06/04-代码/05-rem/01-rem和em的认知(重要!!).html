@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 默认的字体大小 16px */
+    /* 
+      em: 是相对于当前元素 font-size 计算的
+      rem: 是相对于 html 标签 font-size 计算的
+
+      为什么突然要用 rem 为单位呢 ? 为什么要使用rem布局 ?
+      1. 流式布局, 专门写移动端页面
+         缺点: 对于平板等大屏幕设备兼容的不好, 会有点扁
+
+      2. 响应式布局, 用于一套代码兼容多个终端 pc + 平板 + 移动端
+         一般同时兼容三个端, 才会用响应式
+
+      3. rem布局, 可以适配所有的屏幕, 一般适配 移动端 + 平板
+         rem布局是等比例缩放的, 效果完美
+    */
+    html {
+      font-size: 30px;
+    }
+    .rem {
+      width: 20rem;
+      height: 20rem;
+      font-size: 30px;
+      background-color: pink;
+    }
+    .em {
+      width: 20em;
+      height: 20em;
+      font-size: 30px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="rem"></div>
+  <div class="em"></div>
+  
+</body>
+</html>

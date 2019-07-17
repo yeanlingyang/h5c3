@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+
+    /* 
+      使用 rem 为单位
+      rem布局的原理: 在越小的屏幕中, html font-size越小
+                    在越大的屏幕中, html font-size越大
+
+      320  375  400  414  420  480  640
+    */
+    /* >= 320 的屏幕生效 */
+    @media (min-width: 320px) {
+      html {
+        /* 第一个写的是自定义的, 要便于计算 */
+        font-size: 100px;
+      }
+    }
+
+    /* 320/100 = 375/x */
+    /* 3.2 = 375/x */
+    /* >= 375 生效 */
+    @media (min-width: 375px) {
+      html {
+        font-size: 117.1875px;
+      }
+    }
+    @media (min-width: 400px) {
+      html {
+        font-size: 125px;
+      }
+    }
+    @media (min-width: 414px) {
+      html {
+        font-size: 129.375px;
+      }
+    }
+    @media (min-width: 420px) {
+      html {
+        font-size: 131.25px;
+      }
+    }
+    @media (min-width: 480px) {
+      html {
+        font-size: 150px;
+      }
+    }
+
+    body {
+      font-size: 16px;
+    }
+    div {
+      width: 2rem;
+      height: 2rem;
+      background-color: pink;
+    }
+
+    p {
+      width: 1rem;
+      height: 1rem;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <div>内容</div>
+
+  <p>我是p标签</p>
+  
+</body>
+</html>

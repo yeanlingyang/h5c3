@@ -1,0 +1,33 @@
+.father {
+  width: 600px;
+  height: 600px;
+  background-color: skyblue;
+}
+.father::before {
+  content: "";
+}
+.father.active {
+  background-color: blue;
+}
+.father > .son {
+  width: 400px;
+  height: 400px;
+  background-color: green;
+}
+.father > .son .sun {
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+  color: #fff;
+}
+.father .son2 {
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+}
+.father .box1,
+.father .box2 {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}

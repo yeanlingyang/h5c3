@@ -1,0 +1,13 @@
+/* less中对于, css的注释完全支持, css的注释会被编译到 css 文件中去 */
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  border: 1px solid red;
+}
+.box2 {
+  width: 200px;
+  height: 400px;
+  background-color: green;
+  border: 1px solid red;
+}
